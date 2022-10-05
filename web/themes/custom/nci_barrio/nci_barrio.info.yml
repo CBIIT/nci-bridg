@@ -37,4 +37,5 @@ regions:
 # Information added by Drupal.org packaging script on 2019-02-28
 version: '8.x-4.22'
 project: 'bootstrap_barrio'
+core_version_requirement: ^8 || ^9
 datestamp: 1551325396
