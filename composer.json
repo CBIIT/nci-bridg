@@ -23,6 +23,7 @@
         "drupal/asset_injector": "^2.4",
         "drupal/autologout": "^1.0",
         "drupal/backup_migrate": "^5.0",
+        "drupal/bootstrap": "^3.29",
         "drupal/bootstrap_barrio": "^4.22",
         "drupal/config_sync": "^2.0@beta",
         "drupal/core-composer-scaffold": "^9",
