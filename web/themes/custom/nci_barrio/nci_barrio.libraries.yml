@@ -1,22 +1,23 @@
 global-styling-nci:
   css:
     theme:
-      css/cancer.css: {}
-      css/style.css: {}
-      css/navbar.css: {}
-      css/bridgmodel.css: {}
+      # css/cancer.css: {}
+      # css/style.css: {}
+      # css/navbar.css: {}
+      # css/bridgmodel.css: {}
 global-styling:
   version: VERSION
   js:
     js/global.js: {}
+    dist/main.js: {}
   css:
     component:
-      css/style.css: {}
-      css/colors.css: {}
+      # css/style.css: {}
+      # css/colors.css: {}
     theme:
-      css/navbar.css: {}
-      css/cancer.css: {}
-      css/style.css: {}      
+      # css/navbar.css: {}
+      # css/cancer.css: {}
+      # css/style.css: {}
 bootstrap:
   js:
     /libraries/popper/popper.min.js: {}
@@ -30,7 +31,7 @@ bootstrap_cdn:
     //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
   css:
     component:
-      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+      # //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
 color.preview:
   version: VERSION
   css:

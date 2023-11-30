@@ -69,12 +69,12 @@
 #}
 <div id="page-wrapper">
     <div id="page">
-        <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
+        <header id="header" class="nci-header nci-header--extended" role="banner" aria-label="{{ 'NIH National Cancer Institute'|t}}">
             {% block head %}
                 {% if page.secondary_menu or page.top_header or page.top_header_form %}
                     <nav{{ navbar_top_attributes }}>
                         {% if container_navbar %}
-                        <div class="container">
+                        <div class="nci-header__navbar">
                             {% endif %}
                             {{ page.secondary_menu }}
                             {{ page.top_header }}
@@ -102,74 +102,172 @@
             <!-- Start of Code for BRIDGMODEL -->
 
               
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <div class="container">
-                    <!-- Brand -->
-                    <a class="navbar-brand" href="#"></a>
+            <nav aria-label="Primary Navigation Example" class="nci-header-nav">
+            <div class="nci-header-nav__inner">
 
-                    <!-- Toggler/collapsibe Button -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
+                      <ul class="nci-header-nav__primary">
+                          <li class="nci-header-nav__primary-item">
+                                <a data-menu-id="1" class="nci-header-nav__primary-link" href="/">Home</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/about-bridg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/about-bridg">About</a>
-                                    <a class="dropdown-item" href="/about-bridg/goals-and-mission">Goals & Missions</a>
-                                    <a class="dropdown-item" href="/about-bridg/how-bridg-can-be-used">How BRIDG can be used</a>
-                                    <a class="dropdown-item" href="/about-bridg/stakeholders">Stakeholders</a>
-                                    <a class="dropdown-item" href="/about-bridg/background">Background</a>
-                                    <a class="dropdown-item" href="/about-bridg/governance">Governance</a>
-                                    <a class="dropdown-item" href="/about-bridg/faq">FAQs</a>
-                                    <a class="dropdown-item" href="/about-bridg/glossary">Glossary</a>
+                            <li class="nci-header-nav__primary-item">
+                            <button
+                              type="button"
+                              class="usa-button nci-header-nav__primary-button"
+                              aria-expanded="false"
+                              aria-controls="basic-mega-nav-section-one"
+                            >
+                              <span>About</span>
+                            </button>
+                            <div
+                              id="basic-mega-nav-section-one"
+                              class="nci-megamenu" aria-live="polite" aria-busy="false" aria-atomic="true" aria-hidden="true"
+                            >
+                              <div class="grid-container">
+                                <div class="grid-row grid-gap-1">
+                                  <div class="grid-col-3 nci-megamenu__primary-pane">
+                                    <a class="nci-megamenu__primary-link" href="/about-bridg">Explore About</a>
+                                  </div>
+                                  <div class="nci-megamenu__items-pane grid-col-9">
+                                    <div class="grid-row grid-gap">
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/goals-and-mission">Goals & Missions</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/how-bridg-can-be-used">How BRIDG can be used</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/stakeholders">Stakeholders</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="grid-row grid-gap">
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/background">Background</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/governance">Governance</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/faq">FAQs</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="grid-row grid-gap">
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/about-bridg/glossary">Glossary</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/model-subset">Model Subset Diagrams & Reports</a>
+                            <li class="nci-header-nav__primary-item">
+                                <a class="nci-header-nav__primary-link" href="/model-subset">Model Subset Diagrams & Reports</a>
                             </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/download-model" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download & Archive</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/download-model/download-release">Download Release Packages & Browse Online</a>  
-                                    <a class="dropdown-item" href="/download-model/articles-presentations">Download Articles & Presentations</a>
-                                    <a class="dropdown-item" href="/download-model/free-enterprise">Download Free Enterprise Architect Viewer</a>
-                                    <a class="dropdown-item" href="/download-model/work-in-progress">Download Work-in-Progress BRIDG Model</a>
-                                    <a class="dropdown-item" href="/download-model/bridg-mapping">Archived Comprehensive BRIDG Mapping Spreadsheet</a>
-                                    <a class="dropdown-item" href="/download-model/harmonization-package">Download Harmonization Package</a>
+                           
+                            <li class="nci-header-nav__primary-item">
+                            <button
+                              type="button"
+                              class="usa-button nci-header-nav__primary-button"
+                              aria-expanded="false"
+                              aria-controls="basic-mega-nav-section-two"
+                            >
+                              <span>Download & Archive</span>
+                            </button>
+                            <div
+                              id="basic-mega-nav-section-two"
+                              class="nci-megamenu" aria-live="polite" aria-busy="false" aria-atomic="true" aria-hidden="true"
+                            >
+                              <div class="grid-container">
+                                <div class="grid-row grid-gap-1">
+                                  <div class="grid-col-3 nci-megamenu__primary-pane">
+                                    <a class="nci-megamenu__primary-link" href="/download-model">Download & Archive</a>
+                                  </div>
+                                  <div class="nci-megamenu__items-pane grid-col-9">
+                                    <div class="grid-row grid-gap">
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/download-release">Download Release Packages & Browse Online</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/articles-presentations">Download Articles & Presentations</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/free-enterprise">Download Free Enterprise Architect Viewer</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="grid-row grid-gap">
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/work-in-progress">Download Work-in-Progress BRIDG Model</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/bridg-mapping">Archived Comprehensive BRIDG Mapping Spreadsheet</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="grid-col-4">
+                                        <ul class="nci-megamenu__list">
+                                          <li class="nci-megamenu__list-item">
+                                            <a class="nci-megamenu__list-item-link" href="/download-model/harmonization-package">Download Harmonization Package</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/implementation">BRIDG Implementation</a>
+                            <li class="nci-header-nav__primary-item">
+                                <a class="nci-header-nav__primary-link" href="/implementation">BRIDG Implementation</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact-us">Contact Us</a>
+                            <li class="nci-header-nav__primary-item">
+                                <a class="nci-header-nav__primary-link" href="/contact-us">Contact Us</a>
                             </li>
-                            <!--
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-danger" >Action</button>
-                                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
-                            </div>
-                            -->
                         </ul>
-                    </div>
                     </div>
                 </nav>
 
@@ -229,89 +327,259 @@
                 </aside>
             </div>
         {% endif %}
-        <!--
-        <footer class="site-footer">
-            {% block footer %}
-                <div class="{{ container }}">
-                    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-                        <div class="site-footer__top clearfix">
-                            {{ page.footer_first }}
-                            {{ page.footer_second }}
-                            {{ page.footer_third }}
-                            {{ page.footer_fourth }}
-                        </div>
+        <footer
+  class="usa-footer usa-footer--nci-big"
+  id="nci-footer"
+  aria-label="Footer">
+  <div class="usa-footer__nci-return-to-top show">
+    <a href="#top" aria-label="Back To Top"><span>Back To Top</span></a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <nav class="usa-footer__nav" aria-label="Footer navigation">
+            <div class="grid-row grid-gap-4">
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">About</div>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="/">Home</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="/contact-us">Contact Us</a>
+                    </li>
+                    {% if logged_in %}
+                    <li class="usa-footer__secondary-link">
+                      <a href="/user/logout">Log Out</a>
+                    </li>
                     {% endif %}
-                    {% if page.footer_fifth %}
-                        <div class="site-footer__bottom">
-                            {{ page.footer_fifth }}
-                        </div>
-                    {% endif %}
-                </div>
-            {% endblock %}
-        </footer>
-        -->
-        <!-- New Footer -->
-
-        <footer id="new-footer" class="footer site-footer" role="contentinfo">
-            <div class="region region-footer container">
-                <nav role="navigation">
-                    <ul class="menu">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="/contact-us">Contact Us</a>
-                        </li>
-                        {% if logged_in %}
-                            <li>
-                                <span>|</span>
-                                <a href="/user/logout">Log Out</a>
-                            </li>
-                        {% endif %}
-                        <li>
-                            <span>|</span>
-                            <a href="http://www.cancer.gov/global/web/policies/accessibility" target="_blank">Accessibility</a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="http://www.cancer.gov/global/web/policies" target="_blank">Policies</a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" target="_blank">HHS Vulnerability Disclosure</a>
-                        </li>
-                        <li>
-                            <span>|</span><a href="http://www.cancer.gov/policies/foia" target="_blank">FOIA</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav role="navigation">
-                    <ul class="menu">
-                        <li>
-                            <a href="http://www.dhhs.gov/" target="_blank">U.S. Department of Health and Human Services</a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="http://www.nih.gov/" target="_blank">National Institutes of Health</a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="http://www.cancer.gov/" target="_blank">National Cancer Institute </a>
-                        </li>
-                        <li>
-                            <span>|</span>
-                            <a href="http://www.usa.gov/" target="_blank">USA.gov</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div>
-                    <p class="tagline">NIH ... Turning Discovery Into Health <a href="/user" style="text-decoration: none;color:white;cursor: pointer;"><sup>®</sup></a></p>
-                </div>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">Resources</div>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability Disclosure</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.cancer.gov/policies/foia">FOIA</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.cancer.gov/">National Cancer Institute</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.cancer.gov/global/web/policies/accessibility">Accessibility</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">Policies</div>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.cancer.gov/global/web/policies">Policies</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.usa.gov/">USA.gov</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.dhhs.gov/">U.S. Department of Health and Human Services</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
             </div>
+          </nav>
+        </div>
+        <div class="tablet:grid-col-4">
+          <div class="usa-sign-up">
+            <div class="usa-sign-up__heading">
+              Sign up for email updates
+            </div>
+            <form
+              accept-charset="UTF-8"
+              action="https://public.govdelivery.com/accounts/USNIHNCI/subscribers/qualify"
+              aria-label="Subscribe"
+              class="usa-form"
+              id="signup"
+              method="post"
+              novalidate
+              target="_blank">
+              <input
+                type="hidden"
+                name="category_id"
+                id="category_id"
+                value="USNIHNCI_C25"
+              />
+              <div class="usa-form-group">
+                <label class="usa-label" for="email">
+                  Enter your email address
+                </label>
+                <input
+                  class="usa-input width-full"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+              <button
+                class="usa-button usa-button--accent-warm"
+                type="button"><!-- IMPORTANT: Button type should be changed to "submit" -->
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class=" usa-footer__logo grid-row desktop:grid-col-5">
+          <div class="mobile-lg:grid-col-auto mobile-lg:margin-bottom-3">
+            <p class="usa-footer__logo-heading">
+              <span class="logo__agency-name">
+                National Cancer Institute
+              </span>
+              <span class="logo__parent-organization">
+                at the National Institute of Health
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links desktop:grid-col-7">
+          <div class="usa-footer__contact-heading">Contact Us</div>
+          <div class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="tablet:grid-col-auto">
+                <a href="https://livehelp.cancer.gov/">Live Chat</a>
+              </div>
+              <div class="tablet:grid-col-auto tablet:margin-left-2">
+                <a href="tel:1-800-4-CANCER">1-800-4-CANCER</a>
+              </div>
+              <div class="tablet:grid-col-auto tablet:margin-left-2">
+                <a href="mailto:NCIinfo@nih.gov">NCIinfo@nih.gov</a>
+              </div>
+              <div class="tablet:grid-col-auto">
+                <a class="no-exit-notification" href="https://nci.az1.qualtrics.com/jfe/form/SV_aeLLobt6ZeGVn5I" target="_blank">Site Feedback</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__social-links desktop:grid-col-5">
+          <div class="usa-footer__social-heading">Follow us</div>
+          <div class="grid-row grid-gap-1 nci-big__social">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.facebook.com/cancer.gov">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="usa-icon"
+                  role="img"
+                  aria-labelledby="facebook-title">
+                  <title id="facebook-title">Facebook</title>
+                  <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://twitter.com/thenci">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="usa-icon"
+                  role="img"
+                  aria-labelledby="x-title">
+                  <title id="x-title">Follow on X</title>
+                  <path
+                    d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10zm5.2-15.6L13.3 11l4.3 6.2h-3.1L11.6 13 8 17.2h-.9l4.1-4.8-4.1-6h3.1l2.7 3.9 3.4-3.9h.9zm-5.6 5.4.4.6 2.8 4h1.4l-3.5-5-.4-.6-2.6-3.7H8.3l3.3 4.7z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a
+                class="usa-social-link"
+                href="https://www.instagram.com/nationalcancerinstitute/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="usa-icon"
+                  role="img"
+                  aria-labelledby="instagram-title">
+                  <title id="instagram-title">Instagram</title>
+                    <path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z" />
+                    <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm6,12.69A3.32,3.32,0,0,1,14.69,18H9.31A3.32,3.32,0,0,1,6,14.69V9.31A3.32,3.32,0,0,1,9.31,6h5.38A3.32,3.32,0,0,1,18,9.31Z" />
+                    <path d="M16.94,9.31a2.25,2.25,0,0,0-2.25-2.25H9.31A2.25,2.25,0,0,0,7.06,9.31v5.38a2.25,2.25,0,0,0,2.25,2.25h5.38a2.25,2.25,0,0,0,2.25-2.25h0ZM12,15.09A3.09,3.09,0,1,1,15.09,12,3.09,3.09,0,0,1,12,15.09Zm3.77-5.75a.79.79,0,0,1-.55.23.83.83,0,0,1-.55-.23.78.78,0,0,1,0-1.11A.82.82,0,0,1,15.22,8a.78.78,0,0,1,.55,1.33Z" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.youtube.com/NCIgov">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="usa-icon"
+                  role="img"
+                  aria-labelledby="youtube-title">
+                  <title id="youtube-title">Youtube</title>
+                    <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.75,12.91A1.49,1.49,0,0,1,16.69,16a34.65,34.65,0,0,1-4.69.26A34.65,34.65,0,0,1,7.31,16a1.49,1.49,0,0,1-1.06-1.06A15.88,15.88,0,0,1,6,12a15.88,15.88,0,0,1,.25-2.91A1.49,1.49,0,0,1,7.31,8,34.65,34.65,0,0,1,12,7.77,34.65,34.65,0,0,1,16.69,8a1.49,1.49,0,0,1,1.06,1.06A15.88,15.88,0,0,1,18,12,15.88,15.88,0,0,1,17.75,14.91Z" />
+                    <polygon points="10.77 13.78 13.91 12 10.77 10.22 10.77 13.78" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.linkedin.com/company/nationalcancerinstitute/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="usa-icon"
+                  role="img"
+                  aria-labelledby="linkedin-title">
+                  <title id="linkedin-title">Linkedin</title>
+                    <path
+                      d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M8.912001,17.584H6.584v-7.472h2.328001V17.584z
+                                        M7.744,9.104C6.992,9.104,6.4,8.488,6.4,7.76c0-0.752,0.592-1.344,1.344-1.344c0.728,0,1.343999,0.592,1.343999,1.344
+                                        C9.087999,8.488,8.472,9.104,7.744,9.104z M17.6,17.584h-2.328v-3.64c0-0.856-0.024001-1.967999-1.216001-1.967999
+                                        s-1.392,0.927999-1.392,1.912v3.696H10.36v-7.472h2.224v1.008h0.024c0.464-0.752,1.296-1.216001,2.199999-1.192
+                                        c2.352001,0,2.792,1.552001,2.792,3.544001C17.6,13.472,17.6,17.584,17.6,17.584z"
+                    />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links desktop:grid-col-7">
+          <div class="usa-footer__address height-full">
+            <div class="usa-footer__contact-info grid-row grid-gap height-full">
+              <address>
+                <a href="#!">
+                  U.S. Department of Health and Human Services
+                </a>
+                <a href="#!"> National Institutes of Health </a>
+                <a href="#!"> National Cancer Institute </a>
+                <a href="#!">USA.gov</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-        </footer>
-        <!-- End Footer -->
+
+
+<!-- End Footer -->
 
     </div>
 </div>
