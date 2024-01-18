@@ -81928,3 +81928,71 @@ example:
   }
   */
 }
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.usa-table {
+  font-size: 1.06rem;
+  line-height: 1.5;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #1b1b1b;
+  margin: 1.25rem 0;
+  text-align: left;
+}
+.usa-table th {
+  background-color: #fff;
+  border: 1px solid #1b1b1b;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+}
+.usa-table td {
+  background-color: #fff;
+  border: 1px solid #1b1b1b;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+}
+.usa-table thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.usa-table thead th {
+  background-clip: padding-box;
+  font-weight: 700;
+  line-height: 1.3;
+  background-color: #e6e6e6;
+  color: #1b1b1b;
+}
+.usa-table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.usa-table tbody th {
+  text-align: left;
+}
+
+.title-header {
+  border: solid 1px #eaecef;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  background-color: #162e51;
+}
+.title-header h1 {
+  margin: 0;
+}

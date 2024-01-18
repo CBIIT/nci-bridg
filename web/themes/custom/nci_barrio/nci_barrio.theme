@@ -33,3 +33,8 @@ function nci_barrio_form_system_theme_settings_alter(&$form, FormStateInterface 
       'bg-transparent' => t('Transparent'),
   );
 }
+
+function nci_barrio_preprocess_page(&$variables, $hook) {
+  $current_path = \Drupal::request()->getRequestUri();
+  $variables['current_path'] = $current_path;
+}
