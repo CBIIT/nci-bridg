@@ -81996,3 +81996,73 @@ tr {
 .title-header h1 {
   margin: 0;
 }
+
+.nci-hero {
+  position: relative;
+}
+.nci-hero .btn-container {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .nci-hero .btn-container {
+    top: 20px;
+    right: 20px;
+  }
+}
+.nci-hero .btn-container .btn {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.nci-hero .btn-container .btn:hover {
+  color: #23527c;
+}
+
+@media (max-width: 767px) {
+  #block-buttonlinks {
+    display: none;
+  }
+}
+#block-buttonlinks .btn-container {
+  margin-right: 20px;
+}
+#block-buttonlinks .btn-container p {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#block-buttonlinks .btn-container p .btn {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#block-buttonlinks .btn-container p .btn:hover {
+  color: #23527c;
+}
