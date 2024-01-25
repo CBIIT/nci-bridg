@@ -85,7 +85,7 @@ tr {
 
     @media (max-width: 767px) {
       top: 20px;
-      right: 20px;  
+      right: 20px;
     }
 
     .btn {
@@ -102,6 +102,7 @@ tr {
       line-height: 1.5;
       border-radius: 0.25rem;
       transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
       &:hover {
         color: #23527c;
       }
@@ -116,10 +117,12 @@ tr {
 
   .btn-container {
     margin-right: 20px;
+
     p {
       display: flex;
       flex-direction: row;
       gap: 20px;
+
       .btn {
         text-decoration: none;
         display: inline-block;
@@ -134,10 +137,73 @@ tr {
         line-height: 1.5;
         border-radius: 0.25rem;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
         &:hover {
           color: #23527c;
         }
       }
     }
+  }
+}
+
+
+.usa-accordion {
+  list-style-type: none;
+  color: #1b1b1b;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.06rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+
+  .usa-accordion__heading {
+    font-size: 1.06rem;
+    line-height: .9;
+    margin: 0;
+
+    .usa-accordion__button {
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      text-align: left;
+      color: #1b1b1b;
+      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/add.svg),linear-gradient(transparent,transparent);
+      background-color: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: right 1.25rem center;
+      background-size: 1.5rem;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 700;
+      margin: 0;
+      padding: 1rem 3.5rem 1rem 1.25rem;
+      text-decoration: none;
+      width: 100%;
+    }
+    .usa-accordion__button[aria-expanded=true] {
+      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/remove.svg),linear-gradient(transparent,transparent);
+    }
+  }
+
+  .usa-accordion__heading:not(:first-child),
+  .usa-prose .usa-accordion__heading:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
+  .usa-accordion__content {
+    color: #1b1b1b;
+    background-color: #fff;
+    margin-top: 0;
+    overflow: auto;
+    padding: 1rem 1.25rem calc(1rem - 0.25rem);
+    overflow: visible;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    border-bottom: 0.25rem solid #f0f0f0;
+    border-left: 0.25rem solid #f0f0f0;
+    border-right: 0.25rem solid #f0f0f0;
   }
 }

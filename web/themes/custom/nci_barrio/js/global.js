@@ -40,7 +40,40 @@
         });
       }
 
+
+      // accordionButton.forEach((button) => {
+      //   button.addEventListener('click', function (e) {
+      //     e.target.setAttribute("aria-expanded", true)
+      //     var content = button.parentElement.nextElementSibling;
+
+      //     console.log(content.style.display == "none");
+
+      //     if (content.style.display === "none") {
+      //       content.style.display = "block"
+      //     } else {
+      //       content.style.display = "none"
+      //     }
+      //   });
+      // })
+
     }
   };
+
+  const accordionButton = document.querySelectorAll('.usa-accordion__button');
+  accordionButton.forEach((button) => {
+    var content = button.parentElement.nextElementSibling;
+    content.style.display = "none";
+
+    button.addEventListener('click', function (e) {
+      e.target.setAttribute("aria-expanded", true)
+      if (content.style.display === "none") {
+        e.target.setAttribute("aria-expanded", true)
+        content.style.display = "block"
+      } else {
+        content.style.display = "none"
+        e.target.setAttribute("aria-expanded", false)
+      }
+    });
+  })
 
 })(jQuery, Drupal);
