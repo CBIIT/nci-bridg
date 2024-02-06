@@ -29,6 +29,8 @@ import './index.scss';
  */
 import '@nciocpl/ncids-js/components/nci-header/extended-with-mega-menu/auto-init';
 
+import '@nciocpl/ncids-js/components/nci-header/extended-with-mega-menu/auto-init';
+
 /**
  * Imports the NCI Site Alert component auto initializer.
  */

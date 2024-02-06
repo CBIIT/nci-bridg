@@ -169,7 +169,7 @@ tr {
       padding: 0;
       text-align: left;
       color: #1b1b1b;
-      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/add.svg),linear-gradient(transparent,transparent);
+      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/add.svg), linear-gradient(transparent, transparent);
       background-color: #f0f0f0;
       background-repeat: no-repeat;
       background-position: right 1.25rem center;
@@ -182,8 +182,9 @@ tr {
       text-decoration: none;
       width: 100%;
     }
+
     .usa-accordion__button[aria-expanded=true] {
-      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/remove.svg),linear-gradient(transparent,transparent);
+      background-image: url(https://designsystem.digital.gov/assets/img/usa-icons/remove.svg), linear-gradient(transparent, transparent);
     }
   }
 
@@ -205,5 +206,47 @@ tr {
     border-bottom: 0.25rem solid #f0f0f0;
     border-left: 0.25rem solid #f0f0f0;
     border-right: 0.25rem solid #f0f0f0;
+  }
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
+.nci-header-mobilenav {
+  &.active {
+    @media (min-width: 1024px) {
+      display: none !important;
+    }
+  }
+  .nci-header-mobilenav__nav {
+    .nci-header-mobilenav__list {
+      .nci-header-mobilenav__list-node {
+        .nci-header-mobilenav__list {
+          display: none;
+        }
+        &.submenu-open {
+          .nci-header-mobilenav__list-label {
+            border-bottom: 1px solid #e6e6e2;
+          }
+          .nci-header-mobilenav__list {
+            display: block;
+            .nci-header-mobilenav__list-item,
+            .nci-header-mobilenav__list-node {
+              .nci-header-mobilenav__list-link {
+                padding-left: 1.5rem;
+              }
+            }
+          } 
+        }  
+      }
+    }
+  }
+}
+
+.nci-header-mobilenav__overlay {
+  &.active {
+    @media (min-width: 1024px) {
+      display: none !important;
+    }
   }
 }

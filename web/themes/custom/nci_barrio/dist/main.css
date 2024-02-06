@@ -82123,3 +82123,32 @@ tr {
   border-left: 0.25rem solid #f0f0f0;
   border-right: 0.25rem solid #f0f0f0;
 }
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .nci-header-mobilenav.active {
+    display: none !important;
+  }
+}
+.nci-header-mobilenav .nci-header-mobilenav__nav .nci-header-mobilenav__list .nci-header-mobilenav__list-node .nci-header-mobilenav__list {
+  display: none;
+}
+.nci-header-mobilenav .nci-header-mobilenav__nav .nci-header-mobilenav__list .nci-header-mobilenav__list-node.submenu-open .nci-header-mobilenav__list-label {
+  border-bottom: 1px solid #e6e6e2;
+}
+.nci-header-mobilenav .nci-header-mobilenav__nav .nci-header-mobilenav__list .nci-header-mobilenav__list-node.submenu-open .nci-header-mobilenav__list {
+  display: block;
+}
+.nci-header-mobilenav .nci-header-mobilenav__nav .nci-header-mobilenav__list .nci-header-mobilenav__list-node.submenu-open .nci-header-mobilenav__list .nci-header-mobilenav__list-item .nci-header-mobilenav__list-link,
+.nci-header-mobilenav .nci-header-mobilenav__nav .nci-header-mobilenav__list .nci-header-mobilenav__list-node.submenu-open .nci-header-mobilenav__list .nci-header-mobilenav__list-node .nci-header-mobilenav__list-link {
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nci-header-mobilenav__overlay.active {
+    display: none !important;
+  }
+}
