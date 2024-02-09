@@ -270,7 +270,84 @@
             </ul>
           </div>
         </nav>
+
         {% endblock %}
+        <div class="nci-header-mobilenav" tabindex="-1" role="dialog" aria-modal="true" id="nci-header-mobilenav" aria-live="polite" aria-busy="false">
+          <button class="nci-header-mobilenav__close-btn" aria-controls="nci-header-mobilenav" aria-label="Close Menu"></button>
+          <div class="nci-is-loading hidden"></div>
+          <nav class="nci-header-mobilenav__nav" aria-label="Primary navigation.">
+            <ul class="nci-header-mobilenav__list">
+              <li class="nci-header-mobilenav__list-node">
+                <a data-menu-id="1" class="nci-header-mobilenav__list-link {{ current_path == '/' ? 'current' : '' }}" href="/">Home</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <button class="nci-header-mobilenav__list-label" data-href="/about-cancer" data-menu-id="829" data-options="0" data-isroot="false">About</button>
+                <ul class="nci-header-mobilenav__list">
+                  <li class="nci-header-mobilenav__list-item">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg' ? 'current' : '' }}" href="/about-bridg">Explore About</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/goals-and-mission' ? 'current' : '' }}" href="/about-bridg/goals-and-mission">Goals & Missions</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/how-bridg-can-be-used' ? 'current' : '' }}" href="/about-bridg/how-bridg-can-be-used">How BRIDG can be used</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/stakeholders' ? 'current' : '' }}" href="/about-bridg/stakeholders">Stakeholders</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/background' ? 'current' : '' }}" href="/about-bridg/background">Background</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/governance' ? 'current' : '' }}" href="/about-bridg/governance">Governance</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/faq' ? 'current' : '' }}" href="/about-bridg/faq">FAQs</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/glossary' ? 'current' : '' }}" href="/about-bridg/glossary">Glossary</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/model-subset' ? 'current' : '' }}" href="/model-subset">Model Subset Diagrams & Reports</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <button class="nci-header-mobilenav__list-label" data-href="/about-cancer" data-menu-id="829" data-options="0" data-isroot="false">Download & Archive</button>
+                <ul class="nci-header-mobilenav__list">
+                  <li class="nci-header-mobilenav__list-item">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model' ? 'current' : '' }}" href="/download-model">Download & Archive</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/download-release' ? 'current' : '' }}" href="/download-model/download-release">Download Release Packages & Browse Online</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/articles-presentations' ? 'current' : '' }}" href="/download-model/articles-presentations">Download Articles & Presentations</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/free-enterprise' ? 'current' : '' }}" href="/download-model/free-enterprise">Download Free Enterprise Architect Viewer</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/work-in-progress' ? 'current' : '' }}" href="/download-model/work-in-progress">Download Work-in-Progress BRIDG Model</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/bridg-mapping' ? 'current' : '' }}" href="/download-model/bridg-mapping">Archived Comprehensive BRIDG Mapping Spreadsheet</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/harmonization-package' ? 'current' : '' }}" href="/download-model/harmonization-package">Download Harmonization Package</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/implementation' ? 'current' : '' }}" href="/implementation">BRIDG Implementation</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/contact-us' ? 'current' : '' }}" href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nci-header-mobilenav__overlay"></div>
     </header>
 
     {% if page.highlighted %}
@@ -433,7 +510,7 @@
                 <input class="usa-input width-full" id="email" name="email" type="email" value="" />
               </div>
               <button class="usa-button usa-button--accent-warm"
-                type="button"><!-- IMPORTANT: Button type should be changed to "submit" -->
+                type="submit"><!-- IMPORTANT: Button type should be changed to "submit" -->
                 Sign up
               </button>
             </form>

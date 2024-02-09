@@ -1,15 +1,22 @@
-global-styling-nci:
-  css:
-    theme:
-      # dist/main.css: {}
 global-styling:
   version: VERSION
   js:
     js/global.js: {}
-    dist/main.bundle.js: {}
+  css:
+    component:
+      css/style.css: {}
+
+global-styling-nci:
   css:
     theme:
       dist/main.css: {}
+bootstrap:
+  js:
+    /libraries/popper.js/dist/umd/popper.min.js: {}
+    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}      
 color.preview:
   version: VERSION
   css:
