@@ -82153,8 +82153,23 @@ body.mobile-menu-open {
   }
 }
 
+.page-user-login #block-nci-barrio-page-title {
+  display: none;
+}
+.page-user-login .section h2 {
+  margin: 30px 0 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #337ab7;
+}
 .page-user-login .section .content {
   display: flex;
+  justify-content: center;
+}
+.page-user-login .section .d-flex {
+  display: flex;
+}
+.page-user-login .section .justify-content-center {
   justify-content: center;
 }
 
@@ -82207,8 +82222,8 @@ body.mobile-menu-open {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #007bbd;
+  border-color: #007bbd;
 }
 
 .nci-promo-block__content h2 {
@@ -82261,8 +82276,8 @@ body.mobile-menu-open {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #007bbd;
+  border-color: #007bbd;
 }
 .path-search #block-nci-barrio-content h3 {
   padding: 0;
