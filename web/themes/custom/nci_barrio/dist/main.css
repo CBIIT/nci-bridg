@@ -82283,3 +82283,60 @@ body.mobile-menu-open {
   padding: 0;
   font-weight: normal;
 }
+
+#block-nci-barrio-content .search-form .search-help-link {
+  display: none;
+}
+#block-nci-barrio-content .node_search-results {
+  margin: 0;
+  padding: 0;
+}
+#block-nci-barrio-content .node_search-results li {
+  list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#block-nci-barrio-content .node_search-results li h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: inherit;
+}
+#block-nci-barrio-content .node_search-results li h3 a {
+  color: #01679d;
+  line-height: inherit;
+  text-decoration: none;
+}
+#block-nci-barrio-content .node_search-results li.list-group-item p:nth-child(2) {
+  margin-top: 10px;
+}
+#block-nci-barrio-content nav {
+  display: flex;
+  margin-bottom: 50px;
+}
+#block-nci-barrio-content .pagination.js-pager__items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+}
+#block-nci-barrio-content .pagination.js-pager__items li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#block-nci-barrio-content .pagination.js-pager__items li a {
+  border: none;
+  border-radius: 3px;
+  display: block;
+  min-width: 24px;
+  padding: 2px 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#block-nci-barrio-content .pagination.js-pager__items li.active .page-link {
+  border-radius: 3px;
+  min-width: 24px;
+  padding: 3px 6px 5px 6px;
+  background: #25619b;
+  color: #fff;
+}

@@ -412,3 +412,77 @@ body.mobile-menu-open {
     }
   }
 }
+
+#block-nci-barrio-content {
+  .search-form {
+    .search-help-link {
+      display: none;
+    }
+  }
+  .node_search-results {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      h3 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: inherit;
+        a {
+          color: #01679d;
+          line-height: inherit;
+          text-decoration: none;
+        }
+      }
+
+      &.list-group-item {
+        p {
+          &:nth-child(2) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  nav {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .pagination {
+    &.js-pager__items {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      margin-left: auto;
+      li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        
+        a {
+          border: none;
+          border-radius: 3px;
+          display: block;
+          min-width: 24px;
+          padding: 2px 6px;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        &.active {
+          .page-link {
+            border-radius: 3px;
+            min-width: 24px;
+            padding: 3px 6px 5px 6px;
+            background: #25619b;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
