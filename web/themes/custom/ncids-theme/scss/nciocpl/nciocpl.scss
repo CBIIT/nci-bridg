@@ -1,6 +1,0 @@
-@use 'uswds-core' with (
-    $theme-image-path: '@nciocpl/ncids-css/uswds-img',
-);
-@forward 'uswds-global';
-
-@forward 'ncids';

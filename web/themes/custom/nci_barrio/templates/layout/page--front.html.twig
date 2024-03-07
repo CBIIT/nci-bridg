@@ -79,6 +79,7 @@
 					</div>
 				</header>
 			</section>
+
     <header id="header" class="nci-header--extended" role="banner" aria-label="{{ 'NIH National Cancer Institute'|t}}">
       {% block head %}
       {% if page.secondary_menu or page.top_header or page.top_header_form %}
@@ -374,7 +375,7 @@
     {% endblock %}
     {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
-      <div id="page" class="grid-container">
+      <div id="page">
         <div class="grid-row grid-gap">
           {% if page.sidebar_first %}
           <div class="desktop:grid-col-3 nci-no-print">
@@ -392,10 +393,8 @@
               {{ page.breadcrumb }}
               <div class="row row-offcanvas row-offcanvas-left clearfix">
                 <main{{ content_attributes }}>
-                  <section class="section">
-                    <a id="main-content" tabindex="-1"></a>
-                    {{ page.content }}
-                  </section>
+                  <a id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
                 </main>
               </div>
             </div>
@@ -404,10 +403,8 @@
               {{ page.breadcrumb }}
               <div class="row row-offcanvas row-offcanvas-left clearfix">
                 <main{{ content_attributes }}>
-                  <section class="section">
-                    <a id="main-content" tabindex="-1"></a>
-                    {{ page.content }}
-                  </section>
+                  <a id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
                 </main>
               </div>
             </div>
@@ -422,10 +419,8 @@
             </div>
           </div>
           {% endif %}
-
+        </div>
     </div>
-  </div>
-</div>
 {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
 <div class="featured-bottom">
   <aside class="{{ container }} clearfix" role="complementary">

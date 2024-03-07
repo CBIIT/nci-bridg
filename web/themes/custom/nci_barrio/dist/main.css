@@ -82032,6 +82032,9 @@ tr {
 .nci-hero .btn-container .btn:hover {
   color: #23527c;
 }
+.nci-hero .nci-hero__cta-tagline {
+  color: #1b1b1b;
+}
 
 @media (max-width: 767px) {
   #block-buttonlinks {
@@ -82224,10 +82227,6 @@ body.mobile-menu-open {
   color: #fff;
   background-color: #007bbd;
   border-color: #007bbd;
-}
-
-.nci-promo-block__content h2 {
-  color: #fff;
 }
 
 .path-search #block-nci-barrio-page-title .title {
