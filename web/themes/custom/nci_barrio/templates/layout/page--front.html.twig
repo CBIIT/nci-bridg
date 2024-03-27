@@ -117,10 +117,6 @@
 
             <ul class="nci-header-nav__primary">
               <li class="nci-header-nav__primary-item">
-                <a data-menu-id="1" class="nci-header-nav__primary-link {{ current_path == '/' ? 'usa-current' : '' }}" href="/">Home</a>
-              </li>
-
-              <li class="nci-header-nav__primary-item">
                 <button type="button" class="nci-button nci-header-nav__primary-button {{ current_path in ['/about-bridg', '/about-bridg/goals-and-mission', '/about-bridg/how-bridg-can-be-used', '/about-bridg/stakeholders', '/about-bridg/background', '/about-bridg/governance', '/about-bridg/faq', '/about-bridg/glossary'] ? 'usa-current' : '' }}" aria-expanded="false"
                   aria-controls="basic-mega-nav-section-one">
                   <span>About</span>
@@ -431,7 +427,7 @@
 </div>
 {% endif %}
 <footer class="usa-footer usa-footer--nci-big" id="nci-footer" aria-label="Footer">
-  <div class="usa-footer__nci-return-to-top show">
+  <div class="usa-footer__nci-return-to-top hide">
     <a href="#top" aria-label="Back To Top"><span>Back To Top</span></a>
   </div>
   <div class="usa-footer__primary-section">
