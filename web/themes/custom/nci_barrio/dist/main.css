@@ -82410,3 +82410,8 @@ body.mobile-menu-open {
 .usa-summary-box__link[href^="#"]:hover {
   color: #004e7a;
 }
+
+svg.ext {
+  width: 16px;
+  height: 16px;
+}

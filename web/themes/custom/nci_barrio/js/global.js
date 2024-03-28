@@ -85,4 +85,18 @@
     });
   })
 
+  let lastKnownScrollPosition = 0;
+  const returnToTop = document.querySelector('.usa-footer__nci-return-to-top');
+  document.addEventListener("scroll", function() {
+    lastKnownScrollPosition = window.scrollY;
+    if(lastKnownScrollPosition > 20) {
+      returnToTop.classList.remove('hide');
+      returnToTop.classList.add('show');
+    } else {
+      returnToTop.classList.remove('show');
+      returnToTop.classList.add('hide');
+    }
+  })
+
+
 })(jQuery, Drupal);
