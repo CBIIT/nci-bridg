@@ -1,0 +1,638 @@
+{#
+/**
+* @file
+* Bootstrap Barrio's theme implementation to display a single page.
+*
+* The doctype, html, head and body tags are not in this template. Instead they
+* can be found in the html.html.twig template normally located in the
+* core/modules/system directory.
+*
+* Available variables:
+*
+* General utility variables:
+* - base_path: The base URL path of the Drupal installation. Will usually be
+* "/" unless you have installed Drupal in a sub-directory.
+* - is_front: A flag indicating if the current page is the front page.
+* - logged_in: A flag indicating if the user is registered and signed in.
+* - is_admin: A flag indicating if the user has permission to access
+* administration pages.
+*
+* Site identity:
+* - front_page: The URL of the front page. Use this instead of base_path when
+* linking to the front page. This includes the language domain or prefix.
+* - logo: The url of the logo image, as defined in theme settings.
+* - site_name: The name of the site. This is empty when displaying the site
+* name has been disabled in the theme settings.
+* - site_slogan: The slogan of the site. This is empty when displaying the site
+* slogan has been disabled in theme settings.
+
+* Page content (in order of occurrence in the default page.html.twig):
+* - node: Fully loaded node, if there is an automatically-loaded node
+* associated with the page and the node ID is the second argument in the
+* page's path (e.g. node/12345 and node/12345/revisions, but not
+* comment/reply/12345).
+*
+* Regions:
+* - page.top_header: Items for the top header region.
+* - page.top_header_form: Items for the top header form region.
+* - page.header: Items for the header region.
+* - page.header_form: Items for the header form region.
+* - page.highlighted: Items for the highlighted region.
+* - page.primary_menu: Items for the primary menu region.
+* - page.secondary_menu: Items for the secondary menu region.
+* - page.featured_top: Items for the featured top region.
+* - page.content: The main content of the current page.
+* - page.sidebar_first: Items for the first sidebar.
+* - page.sidebar_second: Items for the second sidebar.
+* - page.featured_bottom_first: Items for the first featured bottom region.
+* - page.featured_bottom_second: Items for the second featured bottom region.
+* - page.featured_bottom_third: Items for the third featured bottom region.
+* - page.footer_first: Items for the first footer column.
+* - page.footer_second: Items for the second footer column.
+* - page.footer_third: Items for the third footer column.
+* - page.footer_fourth: Items for the fourth footer column.
+* - page.footer_fifth: Items for the fifth footer column.
+* - page.breadcrumb: Items for the breadcrumb region.
+*
+* Theme variables:
+* - navbar_top_attributes: Items for the header region.
+* - navbar_attributes: Items for the header region.
+* - content_attributes: Items for the header region.
+* - sidebar_first_attributes: Items for the highlighted region.
+* - sidebar_second_attributes: Items for the primary menu region.
+* - sidebar_collapse: If the sidebar_first will collapse.
+*
+* @see template_preprocess_page()
+* @see bootstrap_barrio_preprocess_page()
+* @see html.html.twig
+*/
+#}
+
+{%  set classes = current_path == "/about-bridg" ? "usa-current" : '' %}
+
+<div id="page-wrapper">
+  <div id="page">
+    <section class="usa-banner usa-banner--nci-banner" aria-label="Official government website">
+				<header class="usa-banner__header">
+					<div class="usa-banner__inner">
+						<div class="usa-banner__header-text">An official website of the United States government</div>
+					</div>
+				</header>
+			</section>
+
+    <header id="header" class="nci-header--extended" role="banner" aria-label="{{ 'NIH National Cancer Institute'|t}}">
+      {% block head %}
+      {% if page.secondary_menu or page.top_header or page.top_header_form %}
+      <nav{{ navbar_top_attributes }}>
+        {% if container_navbar %}
+        <div class="nci-header__navbar">
+          {% endif %}
+          {{ page.secondary_menu }}
+          {{ page.top_header }}
+          {% if page.top_header_form %}
+          <div class="form-inline navbar-form float-right">
+            {{ page.top_header_form }}
+          </div>
+          {% endif %}
+          {% if container_navbar %}
+        </div>
+        {% endif %}
+        </nav>
+        {% endif %}
+        <div style="float:clear;"></div>
+        <div id="utility-bar">
+          <div class="container">
+            <div class="row">
+              <div class="utility">
+                <span><a href="https://www.cancer.gov/">National Cancer Institute</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END UTILITY NAV -->
+        <!-- Start of Code for BRIDGMODEL -->
+
+        <nav aria-label="Primary Navigation Example" class="nci-header-nav">
+          <div class="nci-header-nav__inner">
+
+            <ul class="nci-header-nav__primary">
+              <li class="nci-header-nav__primary-item">
+                <button type="button" class="nci-button nci-header-nav__primary-button {{ current_path in ['/about-bridg', '/about-bridg/goals-and-mission', '/about-bridg/how-bridg-can-be-used', '/about-bridg/stakeholders', '/about-bridg/background', '/about-bridg/governance', '/about-bridg/faq', '/about-bridg/glossary'] ? 'usa-current' : '' }}" aria-expanded="false"
+                  aria-controls="basic-mega-nav-section-one">
+                  <span>About</span>
+                </button>
+                <div id="basic-mega-nav-section-one" class="nci-megamenu" aria-live="polite" aria-busy="false"
+                  aria-atomic="true" aria-hidden="true">
+                  <div class="grid-container">
+                    <div class="grid-row grid-gap-1">
+                      <div class="grid-col-3 nci-megamenu__primary-pane">
+                        <a class="nci-megamenu__primary-link" href="/about-bridg">Explore About</a>
+                      </div>
+                      <div class="nci-megamenu__items-pane grid-col-9">
+                        <div class="grid-row grid-gap">
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/goals-and-mission">Goals &
+                                  Missions</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/how-bridg-can-be-used">How
+                                  BRIDG can be used</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link"
+                                  href="/about-bridg/stakeholders">Stakeholders</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="grid-row grid-gap">
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/background">Background</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/governance">Governance</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/faq">FAQs</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="grid-row grid-gap">
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/about-bridg/glossary">Glossary</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+
+              <li class="nci-header-nav__primary-item">
+                <a class="nci-header-nav__primary-link {{ current_path == '/model-subset' ? 'usa-current' : '' }}" href="/model-subset">Model Subset Diagrams & Reports</a>
+              </li>
+
+              <li class="nci-header-nav__primary-item">
+                <button type="button" class="nci-button nci-header-nav__primary-button {{ current_path in ['/download-model', '/download-model/download-release', '/download-model/articles-presentations', '/download-model/free-enterprise', '/download-model/work-in-progress', '/download-model/bridg-mapping', '/download-model/harmonization-package'] ? 'usa-current' : '' }}" aria-expanded="false"
+                  aria-controls="basic-mega-nav-section-two">
+                  <span>Download & Archive</span>
+                </button>
+                <div id="basic-mega-nav-section-two" class="nci-megamenu" aria-live="polite" aria-busy="false"
+                  aria-atomic="true" aria-hidden="true">
+                  <div class="grid-container">
+                    <div class="grid-row grid-gap-1">
+                      <div class="nci-megamenu__items-pane grid-col-9">
+                        <div class="grid-row grid-gap">
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/download-model/download-release">Download
+                                  Release Packages & Browse Online</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link"
+                                  href="/download-model/articles-presentations">Download Articles & Presentations</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/download-model/free-enterprise">Download
+                                  Free Enterprise Architect Viewer</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="grid-row grid-gap">
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/download-model/work-in-progress">Download
+                                  Work-in-Progress BRIDG Model</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link" href="/download-model/bridg-mapping">Archived
+                                  Comprehensive BRIDG Mapping Spreadsheet</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="grid-col-4">
+                            <ul class="nci-megamenu__list">
+                              <li class="nci-megamenu__list-item">
+                                <a class="nci-megamenu__list-item-link"
+                                  href="/download-model/harmonization-package">Download Harmonization Package</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="nci-header-nav__primary-item">
+                <a class="nci-header-nav__primary-link {{ current_path == '/implementation' ? 'usa-current' : '' }}" href="/implementation">BRIDG Implementation</a>
+              </li>
+              <li class="nci-header-nav__primary-item">
+                <a class="nci-header-nav__primary-link {{ current_path == '/contact-us' ? 'usa-current' : '' }}" href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        {% endblock %}
+        <div class="nci-header-mobilenav" tabindex="-1" role="dialog" aria-modal="true" id="nci-header-mobilenav" aria-live="polite" aria-busy="false">
+          <button class="nci-header-mobilenav__close-btn" aria-controls="nci-header-mobilenav" aria-label="Close Menu"></button>
+          <div class="nci-is-loading hidden"></div>
+          <nav class="nci-header-mobilenav__nav" aria-label="Primary navigation.">
+            <ul class="nci-header-mobilenav__list">
+              <li class="nci-header-mobilenav__list-node">
+                <a data-menu-id="1" class="nci-header-mobilenav__list-link {{ current_path == '/' ? 'current' : '' }}" href="/">Home</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <button class="nci-header-mobilenav__list-label" data-href="/about-cancer" data-menu-id="829" data-options="0" data-isroot="false">About</button>
+                <ul class="nci-header-mobilenav__list">
+                  <li class="nci-header-mobilenav__list-item">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg' ? 'current' : '' }}" href="/about-bridg">Explore About</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/goals-and-mission' ? 'current' : '' }}" href="/about-bridg/goals-and-mission">Goals & Missions</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/how-bridg-can-be-used' ? 'current' : '' }}" href="/about-bridg/how-bridg-can-be-used">How BRIDG can be used</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/stakeholders' ? 'current' : '' }}" href="/about-bridg/stakeholders">Stakeholders</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/background' ? 'current' : '' }}" href="/about-bridg/background">Background</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/governance' ? 'current' : '' }}" href="/about-bridg/governance">Governance</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/faq' ? 'current' : '' }}" href="/about-bridg/faq">FAQs</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/about-bridg/glossary' ? 'current' : '' }}" href="/about-bridg/glossary">Glossary</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/model-subset' ? 'current' : '' }}" href="/model-subset">Model Subset Diagrams & Reports</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <button class="nci-header-mobilenav__list-label" data-href="/about-cancer" data-menu-id="829" data-options="0" data-isroot="false">Download & Archive</button>
+                <ul class="nci-header-mobilenav__list">
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/download-release' ? 'current' : '' }}" href="/download-model/download-release">Download Release Packages & Browse Online</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/articles-presentations' ? 'current' : '' }}" href="/download-model/articles-presentations">Download Articles & Presentations</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/free-enterprise' ? 'current' : '' }}" href="/download-model/free-enterprise">Download Free Enterprise Architect Viewer</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/work-in-progress' ? 'current' : '' }}" href="/download-model/work-in-progress">Download Work-in-Progress BRIDG Model</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/bridg-mapping' ? 'current' : '' }}" href="/download-model/bridg-mapping">Archived Comprehensive BRIDG Mapping Spreadsheet</a>
+                  </li>
+                  <li class="nci-header-mobilenav__list-node">
+                    <a class="nci-header-mobilenav__list-link {{ current_path == '/download-model/harmonization-package' ? 'current' : '' }}" href="/download-model/harmonization-package">Download Harmonization Package</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/implementation' ? 'current' : '' }}" href="/implementation">BRIDG Implementation</a>
+              </li>
+              <li class="nci-header-mobilenav__list-node">
+                <a class="nci-header-mobilenav__list-link {{ current_path == '/contact-us' ? 'current' : '' }}" href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nci-header-mobilenav__overlay"></div>
+    </header>
+
+    {% if page.highlighted %}
+    <div class="highlighted">
+      <aside class="{{ container }} section clearfix" role="complementary">
+        {{ page.highlighted }}
+      </aside>
+    </div>
+    {% endif %}
+    {% if page.featured_top %}
+    {% block featured %}
+    <div class="featured-top">
+      <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
+        {{ page.featured_top }}
+      </aside>
+    </div>
+    {% endblock %}
+    {% endif %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      <div id="page">
+        <div class="grid-row grid-gap">
+          {% if page.sidebar_first %}
+          <div class="desktop:grid-col-3 nci-no-print">
+            <div{{ sidebar_first_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_first }}
+              </aside>
+            </div>
+          </div>
+          {% endif %}
+
+          {% block content %}
+          {% if page.sidebar_first or page.sidebar_second %}
+            <div class="cgdpl desktop:grid-col-9">
+              {{ page.breadcrumb }}
+              <div class="row row-offcanvas row-offcanvas-left clearfix">
+                <main{{ content_attributes }}>
+                  <a id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
+                </main>
+              </div>
+            </div>
+          {% else %}
+          <div class="cgdpl desktop:grid-col-12">
+              {{ page.breadcrumb }}
+              <div class="row row-offcanvas row-offcanvas-left clearfix">
+                <main{{ content_attributes }}>
+                  <a id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
+                </main>
+              </div>
+            </div>
+          {% endif %}
+          {% endblock %}        
+          {% if page.sidebar_second %}
+          <div class="desktop:grid-col-3 nci-no-print">
+            <div{{ sidebar_second_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </div>
+{% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+<div class="featured-bottom">
+  <aside class="{{ container }} clearfix" role="complementary">
+    {{ page.featured_bottom_first }}
+    {{ page.featured_bottom_second }}
+    {{ page.featured_bottom_third }}
+  </aside>
+</div>
+{% endif %}
+<footer class="usa-footer usa-footer--nci-big" id="nci-footer" aria-label="Footer">
+  <div class="usa-footer__nci-return-to-top hide">
+    <a href="#top" aria-label="Back To Top"><span>Back To Top</span></a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <nav class="usa-footer__nav" aria-label="Footer navigation">
+            <div class="grid-row grid-gap-4">
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">About</div>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="/">Home</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="/contact-us">Contact Us</a>
+                    </li>
+                    {% if logged_in %}
+                    <li class="usa-footer__secondary-link">
+                      <a href="/user/logout">Log Out</a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">Resources</div>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability
+                        Disclosure</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="http://www.cancer.gov/">National Cancer Institute</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <div class="usa-footer__primary-link">Policies</div>
+<ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.cancer.gov/policies/accessibility">Accessibility</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.cancer.gov/policies/foia">FOIA</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.cancer.gov/policies/privacy-security">Privacy &amp; Security</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.cancer.gov/policies/disclaimer">Disclaimers</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">Vulnerability Disclosure</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="tablet:grid-col-4">
+          <div class="usa-sign-up">
+            <div class="usa-sign-up__heading">
+              Sign up for email updates
+            </div>
+            <form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/USNIHNCI/subscribers/qualify"
+              aria-label="Subscribe" class="usa-form" id="signup" method="post" novalidate target="_blank">
+              <input type="hidden" name="category_id" id="category_id" value="USNIHNCI_C25" />
+              <div class="usa-form-group">
+                <label class="usa-label" for="email">
+                  Enter your email address
+                </label>
+                <input class="usa-input width-full" id="email" name="email" type="email" value="" />
+              </div>
+              <button class="usa-button usa-button--accent-warm"
+                type="submit"><!-- IMPORTANT: Button type should be changed to "submit" -->
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class=" usa-footer__logo grid-row desktop:grid-col-5">
+          <div class="mobile-lg:grid-col-auto mobile-lg:margin-bottom-3">
+            <p class="usa-footer__logo-heading">
+              <span class="logo__agency-name">
+                National Cancer Institute
+              </span>
+              <span class="logo__parent-organization">
+                at the National Institute of Health
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links desktop:grid-col-7">
+          <div class="usa-footer__contact-heading">Contact Us</div>
+          <div class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="tablet:grid-col-auto">
+                <a href="https://livehelp.cancer.gov/">Live Chat</a>
+              </div>
+              <div class="tablet:grid-col-auto tablet:margin-left-2">
+                <a href="tel:1-800-4-CANCER">1-800-4-CANCER</a>
+              </div>
+              <div class="tablet:grid-col-auto tablet:margin-left-2">
+                <a href="mailto:NCIinfo@nih.gov">NCIinfo@nih.gov</a>
+              </div>
+              <div class="tablet:grid-col-auto">
+                <a class="no-exit-notification" href="https://nci.az1.qualtrics.com/jfe/form/SV_aeLLobt6ZeGVn5I"
+                  target="_blank">Site Feedback</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__social-links desktop:grid-col-5">
+          <div class="usa-footer__social-heading">Follow us</div>
+          <div class="grid-row grid-gap-1 nci-big__social">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.facebook.com/cancer.gov">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="usa-icon" role="img"
+                  aria-labelledby="facebook-title">
+                  <title id="facebook-title">Facebook</title>
+                  <path
+                    d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://twitter.com/thenci">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="usa-icon" role="img"
+                  aria-labelledby="x-title">
+                  <title id="x-title">Follow on X</title>
+                  <path
+                    d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10zm5.2-15.6L13.3 11l4.3 6.2h-3.1L11.6 13 8 17.2h-.9l4.1-4.8-4.1-6h3.1l2.7 3.9 3.4-3.9h.9zm-5.6 5.4.4.6 2.8 4h1.4l-3.5-5-.4-.6-2.6-3.7H8.3l3.3 4.7z" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.instagram.com/nationalcancerinstitute/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="usa-icon" role="img"
+                  aria-labelledby="instagram-title">
+                  <title id="instagram-title">Instagram</title>
+                  <path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z" />
+                  <path
+                    d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm6,12.69A3.32,3.32,0,0,1,14.69,18H9.31A3.32,3.32,0,0,1,6,14.69V9.31A3.32,3.32,0,0,1,9.31,6h5.38A3.32,3.32,0,0,1,18,9.31Z" />
+                  <path
+                    d="M16.94,9.31a2.25,2.25,0,0,0-2.25-2.25H9.31A2.25,2.25,0,0,0,7.06,9.31v5.38a2.25,2.25,0,0,0,2.25,2.25h5.38a2.25,2.25,0,0,0,2.25-2.25h0ZM12,15.09A3.09,3.09,0,1,1,15.09,12,3.09,3.09,0,0,1,12,15.09Zm3.77-5.75a.79.79,0,0,1-.55.23.83.83,0,0,1-.55-.23.78.78,0,0,1,0-1.11A.82.82,0,0,1,15.22,8a.78.78,0,0,1,.55,1.33Z" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.youtube.com/NCIgov">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="usa-icon" role="img"
+                  aria-labelledby="youtube-title">
+                  <title id="youtube-title">Youtube</title>
+                  <path
+                    d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.75,12.91A1.49,1.49,0,0,1,16.69,16a34.65,34.65,0,0,1-4.69.26A34.65,34.65,0,0,1,7.31,16a1.49,1.49,0,0,1-1.06-1.06A15.88,15.88,0,0,1,6,12a15.88,15.88,0,0,1,.25-2.91A1.49,1.49,0,0,1,7.31,8,34.65,34.65,0,0,1,12,7.77,34.65,34.65,0,0,1,16.69,8a1.49,1.49,0,0,1,1.06,1.06A15.88,15.88,0,0,1,18,12,15.88,15.88,0,0,1,17.75,14.91Z" />
+                  <polygon points="10.77 13.78 13.91 12 10.77 10.22 10.77 13.78" />
+                </svg>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.linkedin.com/company/nationalcancerinstitute/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="usa-icon" role="img"
+                  aria-labelledby="linkedin-title">
+                  <title id="linkedin-title">Linkedin</title>
+                  <path
+                    d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M8.912001,17.584H6.584v-7.472h2.328001V17.584z
+                                          M7.744,9.104C6.992,9.104,6.4,8.488,6.4,7.76c0-0.752,0.592-1.344,1.344-1.344c0.728,0,1.343999,0.592,1.343999,1.344
+                                          C9.087999,8.488,8.472,9.104,7.744,9.104z M17.6,17.584h-2.328v-3.64c0-0.856-0.024001-1.967999-1.216001-1.967999
+                                          s-1.392,0.927999-1.392,1.912v3.696H10.36v-7.472h2.224v1.008h0.024c0.464-0.752,1.296-1.216001,2.199999-1.192
+                                          c2.352001,0,2.792,1.552001,2.792,3.544001C17.6,13.472,17.6,17.584,17.6,17.584z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links desktop:grid-col-7">
+          <div class="usa-footer__address height-full">
+            <div class="usa-footer__contact-info grid-row grid-gap height-full">
+              <address>
+                <a href="#!">
+                  U.S. Department of Health and Human Services
+                </a>
+                <a href="#!"> National Institutes of Health </a>
+                <a href="#!"> National Cancer Institute </a>
+                <a href="#!">USA.gov</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- End Footer -->
+
+</div>
+</div>

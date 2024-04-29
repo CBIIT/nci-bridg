@@ -1,10 +1,3 @@
-global-styling-nci:
-  css:
-    theme:
-      css/cancer.css: {}
-      css/style.css: {}
-      css/navbar.css: {}
-      css/bridgmodel.css: {}
 global-styling:
   version: VERSION
   js:
@@ -12,25 +5,18 @@ global-styling:
   css:
     component:
       css/style.css: {}
-      css/colors.css: {}
+
+global-styling-nci:
+  css:
     theme:
-      css/navbar.css: {}
-      css/cancer.css: {}
-      css/style.css: {}      
+      dist/main.css: {}
 bootstrap:
   js:
-    /libraries/popper/popper.min.js: {}
+    /libraries/popper.js/dist/umd/popper.min.js: {}
     /libraries/bootstrap/dist/js/bootstrap.min.js: {}
   css:
     component:
-      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
-bootstrap_cdn:
-  js:
-    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
-    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
-  css:
-    component:
-      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}      
 color.preview:
   version: VERSION
   css:

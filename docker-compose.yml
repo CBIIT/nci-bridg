@@ -2,9 +2,9 @@ version: '3.9'
 services:
   drupal-server:
     container_name: drupal-server
-    image: ncidockerhub.nci.nih.gov/webteam/drupal:latest
+    image: alpine
     ports:
-     - 8080:80
+     - 8090:80
     environment:
       hash_salt: k_7ame-GnEyWUYWKFJWIL0EjcwIZnf6UjVvT3YNgTxM6Rb2qUWNP8pOzxQ_Q29OtENOVGzMnHA
       repository: https://github.com/cbiit/nci-bridg
