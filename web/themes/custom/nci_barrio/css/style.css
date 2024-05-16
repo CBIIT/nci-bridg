@@ -16,9 +16,6 @@
 div[role="main"] h1 {
     display:none;
 }
-.nav-tabs > li {
-	display:none;
-}
 
 .nav-tabs {
     border-bottom: 0px;
