@@ -16,9 +16,6 @@
 div[role="main"] h1 {
     display:none;
 }
-.nav-tabs > li {
-	display:none;
-}
 
 .nav-tabs {
     border-bottom: 0px;
@@ -177,4 +174,39 @@ h3 {
 }
 main#content nav.tabs {
     margin-bottom: 0px;
+}
+
+.nav-tabs > li {
+  display: inline-block;  
+  margin: 0 1px; 
+  margin-top: 30px;
+}
+
+.nav-tabs > li > a {
+  display: block; 
+  padding: 10px 20px;  
+  border: 1px solid #464a4d;  
+  border-radius: 1px;  
+  background-color: #464a4d;  
+  color: white;  
+  text-decoration: none;  
+  transition: background-color 0.3s ease;  
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background-color: #054279; 
+  text-decoration: none;  
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #054279; 
+  color: white;  
+  border-color: #054279;  
+}
+
+.nav-tabs {
+  border-bottom: 0px;
 }
