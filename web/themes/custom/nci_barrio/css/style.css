@@ -210,3 +210,6 @@ main#content nav.tabs {
 .nav-tabs {
   border-bottom: 0px;
 }
+.user-login-form {
+	max-width: 600px !important;
+}
