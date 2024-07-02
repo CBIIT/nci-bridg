@@ -282,58 +282,13 @@
           <nav class="usa-footer__nav" aria-label="Footer navigation">
             <div class="grid-row grid-gap-4">
               <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
-                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                  <div class="usa-footer__primary-link">About</div>
-                  <ul class="usa-list usa-list--unstyled">
-                    <li class="usa-footer__secondary-link">
-                      <a href="/">Home</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="/contact-us">Contact Us</a>
-                    </li>
-                    {% if logged_in %}
-                    <li class="usa-footer__secondary-link">
-                      <a href="/user/logout">Log Out</a>
-                    </li>
-                    {% endif %}
-                  </ul>
-                </section>
+                 {{ page.footer_first }}
               </div>
               <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
-                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                  <div class="usa-footer__primary-link">Resources</div>
-                  <ul class="usa-list usa-list--unstyled">
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability
-                        Disclosure</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="http://www.cancer.gov/">National Cancer Institute</a>
-                    </li>
-                  </ul>
-                </section>
+                 {{ page.footer_second }}
               </div>
               <div class="mobile-lg:grid-col-6 desktop:grid-col-4">
-                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                  <div class="usa-footer__primary-link">Policies</div>
-<ul class="usa-list usa-list--unstyled">
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.cancer.gov/policies/accessibility">Accessibility</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.cancer.gov/policies/foia">FOIA</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.cancer.gov/policies/privacy-security">Privacy &amp; Security</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.cancer.gov/policies/disclaimer">Disclaimers</a>
-                    </li>
-                    <li class="usa-footer__secondary-link">
-                      <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">Vulnerability Disclosure</a>
-                    </li>
-                  </ul>
-                </section>
+                {{ page.footer_third }}
               </div>
             </div>
           </nav>
