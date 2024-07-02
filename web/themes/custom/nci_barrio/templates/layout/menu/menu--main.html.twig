@@ -10,10 +10,7 @@
             <div id="basic-mega-nav-section-{{ loop.index }}" class="nci-megamenu" aria-live="polite" aria-busy="false" aria-atomic="true" aria-hidden="true">
               <div class="grid-container">
                 <div class="grid-row grid-gap-1">
-                  <div class="grid-col-3 nci-megamenu__primary-pane">
-                    <a class="nci-megamenu__primary-link" href="{{ item.url }}">{{ item.title }}</a>
-                  </div>
-                  <div class="nci-megamenu__items-pane grid-col-9">
+                <div class="nci-megamenu__items-pane grid-col-9">
                     <div class="grid-row grid-gap">
                       {% for sub_item in item.below %}
                         <div class="grid-col-4">
