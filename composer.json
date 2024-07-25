@@ -41,7 +41,7 @@
         "drupal/faq": "^1.0",
         "drupal/fontawesome": "^2.24",
         "drupal/google_analytics": "^4.0",
-        "drupal/imce": "3.0.12",
+        "drupal/imce": "3.1.0",
         "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/ldap": "^4.3",
         "drupal/menu_block": "^1.10",
