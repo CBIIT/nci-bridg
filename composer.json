@@ -35,7 +35,7 @@
         "drupal/core-composer-scaffold": "^10.4",
         "drupal/core-project-message": "^10.4",
         "drupal/core-recommended": "^10.4",
-        "drupal/diff": "^1.1",
+        "drupal/diff": "^1.9",
         "drupal/exclude_node_title": "^1.0@beta",
         "drupal/extlink": "^2.0",
         "drupal/faq": "^1.0",
